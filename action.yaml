@@ -1,5 +1,14 @@
-name: 'Run Robot Framework Request'
-description: 'Run Robot Framework in a container'
+name: 'Robot Framework Request Action'
+description: 'Run Robot Framework API tests using robotframework-request in Docker'
+inputs:
+  test-path:
+    description: 'Folder or file containing Robot Framework test cases'
+    required: true
 runs:
   using: 'docker'
-  image: 'ghcr.io/yanaphatss/robotframework-request:latest'
+  image: 'docker://ghcr.io/yanaphatss/robotframework-request:latest'
+  args:
+    - ${{ inputs.test-path }}
+branding:
+  icon: 'terminal'
+  color: 'blue'
