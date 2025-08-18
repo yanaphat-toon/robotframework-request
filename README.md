@@ -26,7 +26,3 @@ robot_test:
 ## Outputs
 
 _None_
-
-## License
-
-MIT
