@@ -1,0 +1,5 @@
+name: 'Run Robot Framework Request'
+description: 'Run Robot Framework in a container'
+runs:
+  using: 'docker'
+  image: 'ghcr.io/yanaphatss/robotframework-request:latest'
