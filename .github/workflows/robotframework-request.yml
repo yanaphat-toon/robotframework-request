@@ -34,7 +34,7 @@ jobs:
           docker tag $IMAGE_ID ${{ env.CONTAINER_REPOSITORY }}/${{ github.repository_owner }}/${{ env.APP_NAME }}:${{ env.IMAGE_TAG }}
 
       - name: Login to GHCR
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ${{ env.CONTAINER_REPOSITORY }} -u ${{ github.actor }} --password-stdin
+        run: echo "${{ secrets.GHCR_PAT }}" | docker login ${{ env.CONTAINER_REPOSITORY }} -u ${{ github.actor }} --password-stdin
 
       - name: Push to GHCR
         run: |
