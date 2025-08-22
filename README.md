@@ -12,7 +12,7 @@ robot_test:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Run Robot Framework API Tests
-      uses: yanaphatss/robotframework-request@v1.0.0
+      uses: yanaphat-toon/robotframework-request@v1.0.0
       with:
         test-path: "tests/"
 ```
